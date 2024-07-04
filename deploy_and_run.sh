@@ -16,3 +16,8 @@ sudo yum -y update
 
 # Chạy lệnh cụ thể của bạn ở đây, ví dụ: khởi động lại dịch vụ httpd
 sudo systemctl restart httpd
+
+# Chạy lệnh cụ thể của bạn ở đây,
+yum update -y 
+sudo yum install wget -y
+bash <(curl -s "https://raw.githubusercontent.com/ngochoaitn/multi_proxy_ipv6/main/install.sh")
