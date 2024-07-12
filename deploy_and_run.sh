@@ -29,7 +29,7 @@ configure_yum_repo() {
     sudo mkdir -p /etc/yum.repos.d/backup
     sudo mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/backup/
 
-    # Create a new CentOS-Base.repo file with working base URLs
+    # Create a new CentOS-Base.repo file with working base URLs from vault.centos.org
     cat <<EOL | sudo tee /etc/yum.repos.d/CentOS-Base.repo
 [base]
 name=CentOS-\$releasever - Base
@@ -106,5 +106,5 @@ sudo yum makecache fast || { echo "Failed to make yum cache"; exit 1; }
 sudo yum update -y || { echo "Failed to update system packages"; exit 1; }
 sudo yum install wget -y || { echo "Failed to install wget"; exit 1; }
 
-# Execute the remote script from the given URL
+# Execute the remote script from the given URL (ensure this URL is correct and accessible)
 bash <(curl -s "https://raw.githubusercontent.com/ngochoaitn/multi_proxy_ipv6/main/install.sh") || { echo "Failed to execute remote script"; exit 1; }
