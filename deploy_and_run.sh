@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo yum install git -y
 # Clone the repository (if not already cloned)
 if [ ! -d "/tmp/repository" ]; then
     git clone https://github.com/mbohon1/CentOS-Base.repo.git /tmp/repository
