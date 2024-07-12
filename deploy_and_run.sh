@@ -14,9 +14,6 @@ sudo cp /tmp/repository/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo
 sudo yum clean all
 sudo yum -y update
 
-# Chạy lệnh cụ thể của bạn ở đây, ví dụ: khởi động lại dịch vụ httpd
-sudo systemctl restart httpd
-
 # Chạy lệnh cụ thể của bạn ở đây,
 yum update -y 
 sudo yum install wget -y
